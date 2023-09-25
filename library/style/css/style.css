@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Variable CSS */
+:root {
+    /* Color */
+    --hue: 207;
+    --sat: 90%;
+    --lig: 61%;
+    --nav-color: #fff;
+    --title-color: hsl(var(--hue), 12%, 15%);
+    --text-color: hsl(var(--hue), 12%, 45%);
+    --body-color: hsl(var(--hue), 100%, 99%);
+    --container-color: hsl(224, 89%, 60%);
+    --round-color: #fff;
+
+    /* Font and typography */
+    --body-font: 'Poppins', sans-serif;
+    --small-font: .625rem;
+    --normal-font: 1rem;
+    --biggest-font: 2.75rem;
+}
+
+@media screen and (min-width:968px) {
+    :root {
+        --small-font: .688rem;
+    }
+}
+
+/* Base */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--title-color);
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    font-size: var(--normal-font);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar-brand {
+    color: var(--title-color);
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: var(--container-color);
+}
+
+.nav-link {
+    color: var(--title-color);
+}
+
+.nav-link:hover {
+    color: var(--container-color);
+}
+
+.nav-link.active {
+    color: var(--container-color);
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-collapse {
+    transition: .7s;
+}
+
+/* Input Group */
+.input-group {
+    border: 5px solid var(--container-color);
+    background-color: var(--container-color);
+    border-radius: 5px;
+}
+
+.input-group .form-control {
+    border-radius: 0;
+}
+
+.input-group .form-control:focus,
+.input-group .form-control:active {
+    border: none;
+    box-shadow: none;
+}
+
+.input-group .btn {
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 0;
+    color: var(--round-color);
+    background-color: var(--container-color);
+}
+
+.input-group .btn:active,
+.input-group .btn:focus {
+    border: none;
+    box-shadow: none;
+}
+
+/* Form Group */
+.form-group a {
+    color: var(--container-color);
+}
+
+/* Home */
+#home {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+/* About */
+.icon-a {
+    font-size: var(--biggest-font);
+}
+
+.title-a {
+    color: var(--container-color);
+    font-weight: bold;
+}
+
+/* Tutorial */
+#tutorial {
+    color: var(--round-color);
+    background-color: var(--container-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--container-color);
+    color: var(--round-color);
+}
+
+.icon-sosmed,
+.icon-sosmed:hover {
+    color: var(--round-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Modal */
+.modals {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+}
+
+.modals-content {
+    color: var(--title-color);
+    width: 60%;
+    height: auto;
+    border-radius: .75rem;
+    padding: 20px;
+    margin: 3rem auto;
+    background-color: var(--round-color);
+}
+
+.title-modals {
+    font-weight: bold;
+}
+
+#close-modals {
+    float: right;
+    cursor: pointer;
+}
+
+#close-modals:hover {
+    color: var(--container-color);
+}
+
+.img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn,
+.btn:hover {
+    color: var(--round-color);
+    background-color: var(--container-color);
+}
+
+@media screen and (max-width: 968px) {
+    .modals-content {
+        width: 90%;
+    }
+}
